@@ -1,0 +1,19 @@
+﻿
+
+<asp:Menu runat="server" BackColor="#903000" ForeColor="#F09000" Orientation="Horizontal" SkinID="menu" >                  
+    <StaticHoverStyle BackColor="#F09000" BorderColor="#F09000" ForeColor="#903000" CssClass="onglets" />
+    <StaticSelectedStyle BackColor="#C04800"  ForeColor="#903000" />
+    <StaticMenuItemStyle HorizontalPadding="15px" />
+    <DynamicMenuItemStyle  HorizontalPadding="5px" BackColor="#903000" />
+    <DynamicHoverStyle BackColor="#F09000" ForeColor="#903000" /> 
+</asp:Menu>
+
+<asp:Label runat="server" SkinID="recherche" ForeColor="#F09000" />
+<asp:Label runat="server" SkinID="lblTitreContenu" Font-Bold="true" Font-Size="32px" />
+<asp:TextBox runat="server" SkinId="recherche" Width="225px"  />
+
+<asp:LinkButton runat="server" SkinID="lnkBtnCreationCompte" ForeColor="#F09000" />
+
+
+
+

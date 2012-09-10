@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"  CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="global">
+            <div id="header">
+
+
+            <asp:Image runat="server" ID="imgLogo" ImageUrl="~/App_Themes/default/images/arbre.png" Height="120px" Width="80px" />
+            <asp:Image runat="server" ID="imgNomCompagnie" ImageUrl="~/App_Themes/default/images/CSL Logo.png" />
+                <div id="login">
+                    <table>
+                        <tr>
+                            <td align="right">
+                                <asp:Label ID="lblUserId" runat="server" Text="Utilisateur:" SkinID="recherche"/>
+                            </td>
+                            <td>
+                                <asp:TextBox ID="txtUserId" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <asp:Label ID="lblPassword" runat="server" Text="Mot de passe:" SkinID="recherche" />
+                            </td>
+                            <td>
+                                <asp:TextBox ID="txtPassword" runat="server" />
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="alignRight">
+                        <asp:LinkButton ID="lnkBtnCreerUnCompte" runat="server" Text="Créer un compte" SkinID="lnkBtnCreationCompte" />
+                        <asp:Button ID="btnSeConnecter" runat="server" Text="Se connecter"  />
+                    </div>
+                </div>
+    
+            </div>
+
+            <div id="mainNavigation">
+                <asp:Menu ID="menuHorizontal" runat="server" SkinID="menu" >
+                   <Items>
+                        <asp:MenuItem Text="Accueil" Value="Accueil"/>
+                        <asp:MenuItem Text="Culture">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Sport">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Loisir">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="À propos" Value="À propos" />
+                   </Items>
+                </asp:Menu>
+            </div>
+    
+
+
+            <div id="content">
+
+                
+<%--                <div id="recherche">
+                    <asp:Label runat="server" ID="lblrecherche" SkinID="recherche" Text="Recherche :" />
+                    <asp:TextBox runat="server" ID="txtRecherche" SkinID="recherche" />
+                </div>
+
+                <asp:SiteMapPath runat="server" ID="siteMapPath" CssClass="siteMap" />--%>
+
+               
+
+                <div id="sideNavigation">
+                 
+                     <div id="pensee">
+                        <asp:Label ID="lblPenséeDuJour" runat="server" Text="La différence entre la théorie 
+                                                                             et la pratique, c’est qu’en théorie, 
+                                                                             il n’y a pas de différence entre la 
+                                                                             théorie et la pratique, mais qu’en 
+                                                                             pratique, il y en a une."/>
+
+                        <asp:Label ID="lblAuteurPenséeDuJour" runat="server" Text="Jan van de Sneptscheut" />
+                    </div>
+                </div>
+            
+                <div id="mainContent">
+
+                    
+
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+                </div>
+            
+
+            </div>
+
+            <div id="footer">
+                
+                <asp:Label ID="lblCopyright" runat="server" Text="Copyright © 2012 Qwerty Creation. All Rights Reserved. " />
+
+            </div>
+        </div>
+    </form>
+</body>
+</html>
